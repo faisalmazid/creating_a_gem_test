@@ -1,5 +1,5 @@
 class Hola_faisalmazid
-  def self.hi(language = "indonesia")
+  def hi(language = "indonesia")
     translator = Translator.new(language)
     translator.hi
   end

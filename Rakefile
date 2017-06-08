@@ -1,8 +1,12 @@
-require 'rake/testtask'
+require 'bundler'
+require 'rspec/core/rake_task'
 
-Rake::TestTask.new do |t|
-  t.libs << 'test'
+desc 'Default: run specs'
+task default: [:spec]
+
+desc 'Run specs'
+RSpec::Core::RakeTask.new(:spec) do |t|
+  t.rspec_opts = '--require ./spec/spec_helper'
 end
 
-desc "Run tests"
-task :default => :test
+Bundler::GemHelper.install_tasks
