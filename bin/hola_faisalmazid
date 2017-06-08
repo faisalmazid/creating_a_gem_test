@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+
+require 'hola_faisalmazid'
+puts Hola_faisalmazid.hi(ARGV[0])
